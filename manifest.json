@@ -1,0 +1,12 @@
+{
+    "manifest_version":2,
+    "name": "Easily Me",
+    "description": "Its Just all about You, Get to facebook easily, twitter and others, Next version coming soon includes lots of Characteristics.",
+    "version": "1.0.0",
+    "icons": {"128": "icon128.png"    },
+    "browser_action": {
+        "default_popup": "popup.html",
+        "default_icon" : "icon128.png"
+    },
+    "permissions": ["activeTab"]
+}

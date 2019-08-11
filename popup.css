@@ -1,0 +1,131 @@
+html{
+    font-size: 62.5%;
+}
+.taskcard{
+    width: 250px;
+    height: 200px;
+    margin-left: -8px;
+    margin-right: -8px;
+    position: relative;
+}
+
+.taskcard > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    text-align: center;
+    animation: moveUpp 2s ease-in-out;
+}
+
+.fronttask{
+    z-index: 2;
+    background-image: linear-gradient(to bottom, #2998ff, #56438a);
+    backface-visibility: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#time{
+    user-select: none;
+    margin-top: 10%;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 1px 3px 10px black;
+    display: flex;
+    margin: 20% 20% 0 20%;
+}
+
+#date{  
+    user-select: none; 
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 1px 2px 5px black;
+}
+
+#icons{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 22px;
+    letter-spacing: 5px;
+}
+
+.fa {
+    font-size: 30px;
+    color: #2f5876;
+}
+
+.fa:hover{
+    transform: scale(1.3);
+}
+
+#foot{
+    font-size: 0.1px;
+}
+
+.flex1{
+    transition: all;
+    animation: moveInRight 2s ease-in
+}
+
+.flex2{
+    transition: all;
+    animation: moveInLeft 2s ease-in;
+}
+@keyframes moveInRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-20px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+@keyframes moveInLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(20px)
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+input[type="checkbox"]{
+    justify-self: right;
+	position: relative;
+	width: 30px;
+	height: 15px;
+    -webkit-appearance: none;
+    box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+    border-radius: 15px;
+	outline: none;
+	background: #c6c6c6;
+	transition: .5s;
+}
+input:checked[type="checkbox"]{
+    background:#03a9f4;
+}
+
+input[type="checkbox"]:before{
+	content: '';
+	position: absolute;
+    width: 15px;
+    height: 15px;
+	border-radius: 7.5px;
+	left:0;
+	top:0;
+	background: #00f;
+	transform: scale(1.1);
+	transition: .5s;
+}
+input:checked[type="checkbox"]:before{
+	left: 20px;
+}
+h4{
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
